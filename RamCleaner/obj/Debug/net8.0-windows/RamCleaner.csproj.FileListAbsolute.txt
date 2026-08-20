@@ -1,3 +1,0 @@
-D:\VS Projects\RamCleaner\RamCleaner\obj\Debug\net8.0-windows\RamCleaner.csproj.AssemblyReference.cache
-D:\VS Projects\RamCleaner\RamCleaner\obj\Debug\net8.0-windows\App.g.cs
-D:\VS Projects\RamCleaner\RamCleaner\obj\Debug\net8.0-windows\RamCleaner_MarkupCompile.cache

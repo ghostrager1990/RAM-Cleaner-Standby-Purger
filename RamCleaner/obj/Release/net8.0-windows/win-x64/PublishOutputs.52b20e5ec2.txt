@@ -1,2 +1,0 @@
-D:\VS Projects\RamCleaner\RamCleaner\bin\Release\net8.0-windows\publish\win-x64\RamCleaner.pdb
-D:\VS Projects\RamCleaner\RamCleaner\bin\Release\net8.0-windows\publish\win-x64\RamCleaner.exe
