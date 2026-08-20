@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Threading;
+using Microsoft.Win32;
 using RamCleaner.Core;
 
 namespace RamCleaner
@@ -218,23 +219,45 @@ namespace RamCleaner
             }
         }
 
-        // Exclusion List Handlers
+        // Exclusion List Handlers with Windows Explorer File Dialog Fallback
         private void BtnAddExclusion_Click(object sender, RoutedEventArgs e)
         {
-            string newApp = TxtNewProcess.Text.Trim();
-            if (!string.IsNullOrWhiteSpace(newApp))
-            {
-                if (!newApp.EndsWith(".exe", StringComparison.OrdinalIgnoreCase))
-                {
-                    newApp += ".exe";
-                }
+            string typedApp = TxtNewProcess.Text?.Trim() ?? string.Empty;
 
-                if (!_excludedProcesses.Contains(newApp, StringComparer.OrdinalIgnoreCase))
-                {
-                    _excludedProcesses.Add(newApp);
-                    TxtNewProcess.Clear();
-                    SaveUiToSettings();
-                }
+            // 1. If text was entered into the TextBox, add it directly
+            if (!string.IsNullOrWhiteSpace(typedApp))
+            {
+                AddProcessToExclusionList(typedApp);
+                TxtNewProcess.Clear();
+                return;
+            }
+
+            // 2. If TextBox is empty, open Windows Explorer to browse for an executable
+            var openFileDialog = new OpenFileDialog
+            {
+                Title = "Select Game or Application Executable",
+                Filter = "Executable Files (*.exe)|*.exe|All Files (*.*)|*.*",
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string selectedFileName = Path.GetFileName(openFileDialog.FileName);
+                AddProcessToExclusionList(selectedFileName);
+            }
+        }
+
+        private void AddProcessToExclusionList(string processName)
+        {
+            if (!processName.EndsWith(".exe", StringComparison.OrdinalIgnoreCase))
+            {
+                processName += ".exe";
+            }
+
+            if (!_excludedProcesses.Contains(processName, StringComparer.OrdinalIgnoreCase))
+            {
+                _excludedProcesses.Add(processName);
+                SaveUiToSettings();
             }
         }
 
