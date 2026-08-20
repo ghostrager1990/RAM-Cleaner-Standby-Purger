@@ -9,6 +9,20 @@ A lightweight, dark-themed Windows utility designed to monitor physical RAM and 
 
 ---
 
+<p align="center">
+  <img src="1.png" alt="RAM Cleaner Triggers & Startup Tab" width="600">
+</p>
+
+<details>
+<summary><b>📸 View More Screenshots (Game Pause Exclusion List & Architecture)</b></summary>
+<br>
+<p align="center">
+  <img src="2.png" alt="Exclusion List Game Pause Tab" width="48%">
+  <img src="3.png" alt="About & Help Tab" width="48%">
+</p>
+</details>
+
+
 ## ✨ Features
 
 * **⚡ Native NT Kernel Purging:** Direct invocation of `NtSetSystemInformation` with elevated token privileges to flush memory caches instantly.
