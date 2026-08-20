@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<ApplicationIcon>app.ico</ApplicationIcon>
+
+		<!-- Bundle native runtime DLLs directly into the single .exe -->
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+
+		<!-- Windows File Explorer Details Metadata -->
+		<AssemblyTitle>RAM Cleaner &amp; Standby Purger</AssemblyTitle>
+		<Product>RAM Cleaner</Product>
+		<Description>Lightweight physical memory and standby list purger for Windows.</Description>
+		<Version>1.0.0</Version>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<Authors>Stanorius</Authors>
+		<Company>Stanorius</Company>
+		<Copyright>Copyright © 2026 Stanorius</Copyright>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="H.NotifyIcon.Wpf" Version="2.0.124" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="app.ico">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Resource>
+		<Resource Include="RAMCleanerappicon.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Resource>
+	</ItemGroup>
+
+</Project>
