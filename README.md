@@ -56,6 +56,15 @@ Flushing RAM does **not** crash active games. However, clearing caches mid-game 
 
 ---
 
+## ☕ Support Development
+
+If you find **RAM Cleaner & Standby Purger** helpful and would like to support ongoing updates and maintenance:
+
+* 🇮🇳 **Support via UPI / Cards:** [Donate via Razorpay](https://rzp.io/rzp/CT3Ryaq)  
+  *(Note: This link currently accepts **Indian domestic payment methods only** [UPI, GPay, PhonePe, Paytm, domestic cards/netbanking]. International payments cannot be accepted at this time.)*
+
+---
+
 ## 📄 License & Credits
 
 * Licensed under the **[MIT License](LICENSE)**.
