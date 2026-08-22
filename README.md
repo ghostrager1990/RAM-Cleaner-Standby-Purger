@@ -4,7 +4,7 @@
 [![Framework](https://img.shields.io/badge/Framework-.NET%208%20WPF-512BD4?style=flat&logo=dotnet)](https://dotnet.microsoft.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Release](https://img.shields.io/github/v/release/ghostrager1990/RAM-Cleaner-Standby-Purger?color=blue&style=flat)](https://github.com/ghostrager1990/RAM-Cleaner-Standby-Purger/releases)
-[![Donate](https://img.shields.io/badge/Donate-Razorpay-02042B?style=flat-square&logo=razorpay&logoColor=3395FF)](https://rzp.io/rzp/CT3Ryaq)
+[![Support App](https://img.shields.io/badge/Donate-Razorpay-02042B?style=flat-square&logo=razorpay&logoColor=3395FF)](https://rzp.io/rzp/CT3Ryaq)
 
 A lightweight, dark-themed Windows utility designed to monitor physical RAM and instantly reclaim unreleased working sets and cached standby lists via native NT kernel interfaces.
 
